@@ -21,7 +21,6 @@
     
  
   - name: copying jar file with playbook
-    become: yes
     copy:
         src: /home/ubuntu/insuresele.jar
         dest: /home/ubuntu/insuresele.jar
