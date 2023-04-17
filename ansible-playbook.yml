@@ -19,13 +19,15 @@
   - name: Deploy Docker Container
     command: docker run -itd -p 8082:8081 swapnil9519/insurance:1.0
     
-  - name: Copy file with owner and permission, using symbolic representation
-    ansible.builtin.copy:
-      src: /home/ubuntu/insuresele.jar
-      dest: /home/ubuntu/insuresele.jar
-      owner: ubuntu
-      group: ubuntu
-      mode: u=rw,g=r,o=r
+ 
+  - name: copying jar file with playbook
+      become: true 
+      copy:
+        src: /home/ubuntu/insuresele.jar
+        dest: /home/ubuntu/insuresele.jar
+        owner: ubuntu
+        group: ubuntu        
+        mode: 777
       
   - name : run selenium jar
     command : java -jar /home/ubuntu/insuresele.jar
