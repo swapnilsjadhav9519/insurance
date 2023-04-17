@@ -22,7 +22,7 @@
  
   - name: copying jar file with playbook
     copy:
-        src: /home/ubuntu/insuresele.jar
+        src: /var/lib/jenkins/workspace/insurance/insuresele.jar
         dest: /home/ubuntu/insuresele.jar
         owner: ubuntu
         group: ubuntu        
