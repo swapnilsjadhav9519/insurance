@@ -21,7 +21,7 @@
     
   - name: Copy file with owner and permission, using symbolic representation
     ansible.builtin.copy:
-      src: /var/lib/jenkins/workspace/insurance/insuresele.jar
+      src: /home/ubuntu/insuresele.jar
       dest: /home/ubuntu/insuresele.jar
       owner: ubuntu
       group: ubuntu
