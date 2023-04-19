@@ -28,6 +28,5 @@
         group: ubuntu        
         mode: u=rw,g=r,o=r
       
-  - name : run selenium jar
-    command : java -jar /home/ubuntu/insuresele.jar
+ 
    
