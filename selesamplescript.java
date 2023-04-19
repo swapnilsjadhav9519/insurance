@@ -17,17 +17,15 @@ public class selesamplescript {
 		 
 	public static void main(String[] args)
 	{	
-           System.out.println("swapnil selenium inruance website testing study "); 
+                System.out.println("swapnil selenium inruance website testing study "); 
 	
-        // TODO Auto-generated method stub 
-           //windows
-   		//System.setProperty("webdriver.chrome.driver","C:\\Users\\jadha\\Downloads\\chromedriver_win32\\chromedriver.exe");
-           System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver"); //ubuntu
+       
+                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver"); //ubuntu
 
 
-        ChromeOptions chromeOptions = new ChromeOptions();
+                ChromeOptions chromeOptions = new ChromeOptions();
    		WebDriver driver = new ChromeDriver(chromeOptions);
-   		driver.get("http://65.2.149.114:8084//contact.html"); //where website is up
+   		driver.get("http://65.2.149.114:8084//contact.html"); //where insureme website is up
    		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
    		driver.findElement(By.id("inputName")).sendKeys("swapnil jadhav");
    		driver.findElement(By.id("inputNumber")).sendKeys("9975179519");
