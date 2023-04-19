@@ -30,5 +30,4 @@
       
   - name : run selenium jar
     command : java -jar /home/ubuntu/insuresele.jar
-    //become : yes
-    //become_user : ubuntu
+   
