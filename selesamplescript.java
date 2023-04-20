@@ -17,15 +17,30 @@ public class selesamplescript {
 		 
 	public static void main(String[] args)
 	{	
-                System.out.println("swapnil selenium inruance website testing study "); 
+           System.out.println("swapnil selenium inruance website testing study "); 
 	
        
-                System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver"); //ubuntu
+        //windows
+   		//System.setProperty("webdriver.chrome.driver","C:\\Users\\jadha\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+        
+        //ubuntu
+  		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        //chromeOptions.addArguments("--headless");
+        //schromeOptions.addArguments("--no-sandbox");
 
-
-                ChromeOptions chromeOptions = new ChromeOptions();
-   		WebDriver driver = new ChromeDriver(chromeOptions);
-   		driver.get("http://65.2.149.114:8084//contact.html"); //where insureme website is up
+        System.out.println("got the chromdriver");
+        
+        WebDriver driver = new ChromeDriver(chromeOptions);
+   		
+        driver.manage().window().maximize();
+   		       
+   		System.out.println("NOW lets goto website");
+   		
+   		
+   		
+  //testing for actual insurance code		
+   		driver.get("http://15.206.117.190:8082//contact.html"); //where website is up on test serevr
    		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
    		driver.findElement(By.id("inputName")).sendKeys("swapnil jadhav");
    		driver.findElement(By.id("inputNumber")).sendKeys("9975179519");
@@ -39,11 +54,15 @@ public class selesamplescript {
    		} else 
    		{
    			System.out.println("contact page testing failed");
-   		}
+   		} 
    		
-           	
+  		
+   		
+   		
+   		             	
 	System.out.println("selenuim contact page testing executed"); 
 		
 	}
 
  }
+
